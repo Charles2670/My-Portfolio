@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <background img src="./home.webp"></background>
+</head>
+
+<body>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="home.html">Portfolio</a></div>
+            <ul class="menu">
+                <li><a href="home.html" class="menu-btn">Home</a></li>
+                <li><a href="loading1.html" class="menu-btn">About Me</a></li>
+                <li><a href="https://wa.me/9820805259"><i class="fab fa-whatsapp"></i>9820805259</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!------------------------ home section start ----------------------------------->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-3">Hey all I am Charles,</div>
+                <div class="text-3">I am curretly in 3rd year of B.Tech Computer Engineering studying at NMIMS College in Kharghar. 
+                    I am passionate about coding and have good enough experience in languages such as C++, Python, Java, HTML, CSS, and Javascript.</div>
+                <div class="text-3">My Resume:<span class="typing"></span></div>
+                <a href="./Resume.pdf">Resume</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- projects section start -->
+    <section class="projects" id="projects">
+        <div class="heading">
+            <h1> Projects</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="products-container">
+
+                <div class="product" data-name="p-1">
+                    <img src="./Java project.png" alt="byte Bazaar project">
+                    <h2>Java project</h2>
+                    <div class="price"><h5>Byte Bazaar</h5>
+                    </div>
+                    <a href="https://github.com/MahekMushrif-25/ByteBazaar">Explore</a>
+                </div>
+
+                <div class="product" data-name="p-3">
+                    <img src="./web dev project.png" alt="">
+                    <h2>Web Development Project</h2>
+                    <div class="price"><h5>Car Hub</h5>
+                    </div>
+                    <a href="https://github.com/Charles2670/CarHub">Explore</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--------Other Section --------->
+
+    <section class="other" id="other">
+        <div class="max-width">
+            <h2 class="title">Experience</h2>
+            <div class="box-container">
+                <div class="box">
+                    <i class="fa-solid fa-handshake"></i>
+                    <h3>Robin hood Organization</h3>
+                    <p>Student volunteer</p>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-headset"></i>
+                    <h3>Infinix Club within college</h3>
+                    <p>Executive Member of the club</p>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <h3>Pandora's Box Event</h3>
+                    <p>Helped in organinsing the event  by handling the round 2 of the event for the Ignite fest within college</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- footer section start -->
+    <footer>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Home Address</h4>
+                        <p>Geetanjali Sujay, 1001</p>
+                    <p>Sector - 34(C), Kharghar</p>
+                    <p>Navi Mumbai, Maharashtra</p>
+                    <p>410210</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>College Address</h4>
+                    <p>NMIMS College,</p>
+                    <p>Sector - 34(C), Kharghar</p>
+                    <p>Navi Mumbai, Maharashtra</p>
+                    <p>410210</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>CONTACT</h4>
+                        
+                        <p>9820805259</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow Me</h4>
+
+                        <div class="wrapper">
+                            <div class="icon instagram">
+                                <a href="https://www.instagram.com/__charles_26/"> <span><i class="fab fa-instagram"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxiQPT3cwJm-dQrq02khFIQnyUniDEHQN9xgRPKOcM5zznNPkEQfKJLH60q9m1rp4Su/exec'
+            const form = document.form['submit-to-google-sheet']
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, {
+                        method: 'POST',
+                        body: new FormData(form)
+                    })
+                    .then(response => {
+                        msg.innerHTML = "Message Sent Successfully";
+                        setTimeout(function() {
+                            msg.innerHtml = ""
+                        }, 5000)
+                        form.reser()
+                    })
+                    .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+        <script src="home.js">
+        </script>
+</body>
+
+</html>
